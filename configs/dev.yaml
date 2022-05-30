@@ -1,0 +1,48 @@
+test_mode: False
+model_seed: 0
+dataset_seed: 0
+machine: "local"
+device: "cuda"
+skip_run_init: False
+explicit_run_enumeration: False
+run_num: 0
+log_figures: True
+
+dataset_length: 1000000
+dataset_path: null #TODO fill dataset here!
+experiment_tag: null # fill
+wandb_username: null # fill
+project_name: null # fill
+
+optimizer: "adamw"
+learning_rate: 0.001
+max_lr: 0.001
+lr_schedule: False
+beta1: 0.9
+beta2: 0.999
+weight_decay: 0.001
+convergence_eps: 0.00001
+gradient_norm_clip: 1
+anomaly_detection: False
+
+initial_batch_size: 100
+auto_batch_sizing: False
+auto_batch_reduction: 0.2
+max_epochs: 100
+history: 20
+
+graph_model: schnet
+graph_convolution_layers: 2
+graph_filters: 16
+atom_embedding_size: 16
+graph_norm: layer
+num_radial: 12
+graph_convolution_cutoff: 5
+max_num_neighbors: 10
+
+num_fc_layers: 1
+fc_depth: 16
+pooling: attention
+activation: "gelu"
+fc_dropout_probability: 0.1
+fc_norm_mode: layer
